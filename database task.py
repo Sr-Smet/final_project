@@ -1,7 +1,8 @@
 # Задание 1
 
-SELECT login, COUNT("Orders". "inDelivery") FROM "Couriers" INNER JOIN "Orders" ON "Couriers"id = "Orders". "courierld" GROUP BY
-1,"Orders". "inDelivery" HAVING "Orders". "inDelivery" = true;
+SELECT login, COUNT ("Orders".id) AS Orders_count FROM "Couriers" JOIN "Orders" ON "Couriers".id="Orders"."courierId" WHERE "inDelivery" = true
+ GROUP BY login;
+
 
 
 # Задание 2
